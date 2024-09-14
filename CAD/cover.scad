@@ -11,7 +11,6 @@ keypad_x = 66.506;
 keypad_y_offset = 6.183;
 keypad_x_offset = 7.034; // From the right
 
-/*
 // Main board
 difference() {
 	color("green") roundedBox([board_width, board_length, 1.6], radius=3.175, sidesonly=true);
@@ -28,7 +27,6 @@ translate([0, board_length/2, -1.6 * 2]) color("silver") cube([9.0, 7.3533, 1.6]
 
 // Keys
 translate([-((board_width - keypad_x) / 2) + keypad_x_offset, -((board_length - keypad_x) / 2) + keypad_y_offset, 0]) cube([keypad_x, keypad_x, 4], center=true);
-*/
 
 // Case
 difference() {
