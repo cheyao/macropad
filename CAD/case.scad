@@ -35,7 +35,7 @@ translate([-((board_width - keypad_x) / 2) + keypad_x_offset, -((board_length - 
 // 21×17.8×3.5mm
 // Case
 difference() {
-	translate([0, 0, -5]) roundedBox([board_width + 14, board_length + 14, 13], radius=3.175, sidesonly=true);
+	translate([0, 0, -5]) roundedBox([board_width + 14, board_length + 14, 12], radius=3.175, sidesonly=true);
 	// USB hole
 	translate([0, board_length/2, -3.6]) cube([19, 20, 6], center=true);
 	// Board hollow
