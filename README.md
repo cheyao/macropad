@@ -11,3 +11,16 @@ I'm not adding too many features, playing it safe. Better getting something plai
 
 Fingers crossed that everything works
 
+```
+.
+├── CAD # 3D Files
+├── PCB
+│   ├── gerbers # Gerbers
+│   └── third_party
+│       ├── Kalih # The keys
+│       ├── OPL_Kicad_Library # Seed footprint
+│       └── Seeeduino-xiao-rp2040-KiCAD-Library # Seed schema
+└── firmware # Directory of my own firmware
+    └── kmk # third party firmware
+```
+
