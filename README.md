@@ -13,14 +13,23 @@ Fingers crossed that everything works
 
 ```
 .
-├── CAD # 3D Files
+├── CAD                                         # 3D Files
+│   ├── cover.scad                              # Cover
+│   ├── case.scad                               # Case
+│   ├── ...                                     # Some libraries
+│   └── *.stl                                   # STL output
 ├── PCB
-│   ├── gerbers # Gerbers
+│   ├── macropad-bom.csv                        # BOM
+│   ├── gerbers                                 # Gerbers
 │   └── third_party
-│       ├── Kalih # The keys
-│       ├── OPL_Kicad_Library # Seed footprint
+│       ├── Kalih                               # The keys
+│       ├── OPL_Kicad_Library                   # Seed footprint
+│       ├── KiCad-SSD1306-128x64-master         # LCD
 │       └── Seeeduino-xiao-rp2040-KiCAD-Library # Seed schema
-└── firmware # Directory of my own firmware
-    └── kmk # third party firmware
+└── firmware                                    # Directory of my own firmware
+    ├── adafruit-circuitpython-seeeduino_xiao_rp2040-en_US-9.1.4.uf2 # Circuitpython firmware
+    ├── main.py                                 # Main firmware
+    ├── boot.py                                 # Boot options
+    └── kmk                                     # kmk firmware
 ```
 
