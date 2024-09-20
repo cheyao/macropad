@@ -3,13 +3,30 @@ use <MCAD/boxes.scad>
 use <cyl_head_bolt.scad>
 
 // PCB
-board_width = 81.0987;
-board_length = 93.358;
-hole_offset_x = 4.105;
-hole_offset_y = 3.664;
-keypad_x = 66.506;
-keypad_y_offset = 6.183;
-keypad_x_offset = 7.034; // From the right
+THICKNESS = 14;
+MARGIN = 8;
+
+W = 83.480;
+H = 97.326;
+
+USB_ROFF = 15.344;
+
+HL = 4.105;
+HR = 3.969;
+HB = 3.969;
+HT = 4.458;
+
+KEYBY = 1.619;
+KEYLX = 8.555;
+
+KEY_WIDTH = 66.506;
+KEY_HEIGHT = 66.506;
+
+LCDLX = 29.567;
+LCDTY = 1.126;
+
+LCDW = 27.4;
+LCDH = 27.3;
 
 // Holders
 module hole(h=13.1, ir=2.9, or=4.0) {
@@ -18,12 +35,14 @@ module hole(h=13.1, ir=2.9, or=4.0) {
 
 // Cover
 color([0, 1, 0, 0.5]) difference() {
-	roundedBox([board_width + 14, board_length + 14, 4], radius=3.175, sidesonly=true);
+	roundedBox([W + THICKNESS, H + THICKNESS, THICKNESS - MARGIN], radius=3.175, sidesonly=true);
 	// Keypad hole
-	translate([-((board_width - keypad_x) / 2) + keypad_x_offset, -((board_length - keypad_x) / 2) + keypad_y_offset, 0]) cube([keypad_x + 1.5, keypad_x + 1.5, 40], center=true);
+	translate([-W/2 + KEYLX - 0.5, -H/2 + KEYBY - (0.5/2), -10]) cube([KEY_WIDTH + 1, KEY_HEIGHT + 1.5, 40]);
 	// Screw holes
-	translate([board_width / 2 - hole_offset_x, board_length / 2 - hole_offset_y, 5/2-0.8]) hole();
-	translate([board_width / 2 - hole_offset_x, -board_length / 2 + hole_offset_y, 5/2-0.8]) hole();
-	translate([-board_width / 2 + hole_offset_x, board_length / 2 - hole_offset_y, 5/2-0.8]) hole();
-	translate([-board_width / 2 + hole_offset_x, -board_length / 2 + hole_offset_y, 5/2-0.8]) hole();
+	translate([+W / 2 - HR, -H / 2 + HB, 500]) hole();
+	translate([-W / 2 + HL, -H / 2 + HB, 500]) hole();
+	translate([+W / 2 - HR, +H / 2 - HT, 500]) hole();
+	translate([-W / 2 + HL, +H / 2 - HT, 500]) hole();
+	// LCD
+	translate([-W / 2 + LCDLX - 1, (H / 2) - (LCDH + 2), -25]) cube([LCDW + 2, LCDH + 2, 50]);
 }
