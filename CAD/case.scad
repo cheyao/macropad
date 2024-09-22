@@ -7,6 +7,7 @@ W = 83.480;
 H = 97.326;
 
 USB_ROFF = 15.344;
+USB_COFF = 19.844;
 
 // Check 
 HL = 4.105;
@@ -23,7 +24,7 @@ color("orange") difference() {
 	// Board hollow
 	translate([0, 0, -2]) roundedBox([W + MARGIN, H + MARGIN, 10], radius=3.175, sidesonly=true);
 	// USB hole
-	translate([W/2-USB_ROFF-9.5, H/2, -3.6]) cube([19, 20, 6], center=true);
+	translate([W/2-USB_COFF, H/2, -3.6]) cube([19, 20, 6], center=true);
 }
 
 // Holders
