@@ -24,7 +24,7 @@ Fingers crossed everything works fine
 ├── PCB
 │   ├── macropad.step                           # 3D Model of the board
 │   ├── production                              # The output directory for production (Just send this folder to JLCPCB)
-│   │   ├── Cyao_macropad_v2.1.zip              # Gerbers
+│   │   ├── Cyao_macropad_v2.3.zip              # Gerbers
 │   │   ├── *.{csv,ipc}                         # Misc files for JLCPCB
 │   │   └── ibom.html                           # Interactive bom for PCBAlex <3
 │   └── third_party
@@ -38,4 +38,10 @@ Fingers crossed everything works fine
     ├── boot.py                                 # Boot options
     └── kmk                                     # kmk firmware
 ```
+
+NOTE: I will need a 0.96” SSD1306 OLED screen that is compatible with 3.3V
+
+The resistors are 4.7k ohm ones
+
+The resistors are allso probably optional - but suggested by reddit
 
