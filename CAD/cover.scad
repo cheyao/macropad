@@ -37,7 +37,7 @@ module hole(h=13.1, ir=2.9, or=4.0) {
 color([0, 1, 0, 0.5]) difference() {
 	roundedBox([W + THICKNESS, H + THICKNESS, THICKNESS - MARGIN], radius=3.175, sidesonly=true);
 	// Keypad hole
-	translate([-W/2 + KEYLX - 0.5, -H/2 + KEYBY - (0.5/2), -10]) cube([KEY_WIDTH + 1, KEY_HEIGHT + 1.5, 40]);
+	translate([-W/2 + KEYLX - 1, -H/2 + KEYBY - (2/2), -10]) cube([KEY_WIDTH + 2, KEY_HEIGHT + 2, 40]);
 	// Screw holes
 	translate([+W / 2 - HR, -H / 2 + HB, 500]) hole();
 	translate([-W / 2 + HL, -H / 2 + HB, 500]) hole();
