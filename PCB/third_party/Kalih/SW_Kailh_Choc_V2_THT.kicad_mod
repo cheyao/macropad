@@ -67,4 +67,9 @@
       b855a3a4-bed2-4582-baa1-fdb06a6eb6bc
     )
   )
+  (model "${KIPRJMOD}/third_party/Kalih/Kailh_PG1353.STEP"
+    (offset (xyz 0 0 2.5))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 90))
+  )
 )

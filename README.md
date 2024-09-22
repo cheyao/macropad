@@ -9,7 +9,9 @@ Fingers crossed everything works fine
   <img src="https://cloud-54hh12yzw-hack-club-bot.vercel.app/2screenshot_2024-09-20_at_5.43.58_pm.png" width="32%"/>
 </p>
 
-Fingers crossed that everything works
+<img src="https://cloud-8usq0iiv2-hack-club-bot.vercel.app/0screenshot_2024-09-22_at_9.38.49_am.png"/>
+
+## File list:
 
 ```
 .
