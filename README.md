@@ -19,10 +19,14 @@ Fingers crossed everything works fine
 │   ├── cover.scad                              # Cover
 │   ├── case.scad                               # Case
 │   ├── ...                                     # Some libraries
-│   └── *.stl                                   # STL output
+│   ├── case.stl                                # Case stl output
+│   └── cover.stl                               # Cover stl output (Acrylic please)
 ├── PCB
-│   ├── macropad-bom.csv                        # BOM
-│   ├── gerbers                                 # Gerbers
+│   ├── macropad.step                           # 3D Model of the board
+│   ├── production                              # The output directory for production (Just send this folder to JLCPCB)
+│   │   ├── Cyao_macropad_v2.1.zip              # Gerbers
+│   │   ├── *.{csv,ipc}                         # Misc files for JLCPCB
+│   │   └── ibom.html                           # Interactive bom for PCBAlex <3
 │   └── third_party
 │       ├── Kalih                               # The keys
 │       ├── OPL_Kicad_Library                   # Seed footprint
