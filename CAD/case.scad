@@ -1,6 +1,5 @@
 // Units: mm
 use <MCAD/boxes.scad>
-use <cyl_head_bolt.scad>
 
 // PCB
 W = 83.480;
@@ -28,10 +27,10 @@ color("orange") difference() {
 }
 
 // Holders
-module hole_cylinder(h=9.1, ir=2.9, or=6.0) {
+module hole_cylinder(h=9.1, or=6.0) {
 	difference() {
 		cylinder(h=h, r=or, center=true);
-		translate([0, 0, h]) hole_through(name="M3", l=h);
+		translate([0, 0, 2.9]) cylinder(h=3.4, r=4.7/2, center=true);
 	}
 }
 

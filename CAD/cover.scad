@@ -1,6 +1,5 @@
 // Units: mm
 use <MCAD/boxes.scad>
-use <cyl_head_bolt.scad>
 
 // PCB
 THICKNESS = 14;
@@ -30,7 +29,7 @@ LCDH = 27.3;
 
 // Holders
 module hole(h=13.1, ir=2.9, or=4.0) {
-	translate([0, 0, 50]) hole_through(name="M3", l=1000);
+	translate([0, 0, 50]) cylinder(h=3000000.4, r=4.7/2, center=true);
 }
 
 // Cover

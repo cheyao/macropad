@@ -19,6 +19,7 @@ Fingers crossed everything works fine
 │   ├── cover.scad                              # Cover
 │   ├── case.scad                               # Case
 │   ├── ...                                     # Some libraries
+│   ├── plate.dxf                               # Keyboard plate
 │   ├── case.stl                                # Case stl output
 │   └── cover.stl                               # Cover stl output (Acrylic please)
 ├── PCB
