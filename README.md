@@ -25,7 +25,7 @@ Fingers crossed everything works fine
 ├── PCB
 │   ├── macropad.step                           # 3D Model of the board
 │   ├── production                              # The output directory for production (Just send this folder to JLCPCB)
-│   │   ├── Cyao_macropad_v2.4.zip              # Gerbers
+│   │   ├── Cyao_macropad_v3.0.zip              # Gerbers
 │   │   ├── *.{csv,ipc}                         # Misc files for JLCPCB
 │   │   └── ibom.html                           # Interactive bom for PCBAlex <3
 │   └── third_party
