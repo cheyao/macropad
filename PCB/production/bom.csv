@@ -1,7 +1,6 @@
 ﻿Designator,Footprint,Quantity,Value,LCSC Part #
 Brd1,128x64OLED,1,SSD1306,
 "D1, D10, D11, D12, D13, D14, D15, D16, D2, D3, D4, D5, D6, D7, D8, D9",D_DO-35_SOD27_P7.62mm_Horizontal,16,Didode 1N4148,
-"H1, H2, H3, H4",MountingHole_3.2mm_M3_Pad,4,Mounting Hole,
-"R1, R2",R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,2,Resistor 4.7k ohm,
-"SW1, SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9",SW_Kailh_Choc_V2_THT,16,Kailh Choc V2,
-U2,XIAO-Generic-Thruhole-14P-2.54-21X17.8MM,1,SEEEDUINO XIAO RP2040,
+"R1, R2",R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,2,4.7k,
+"SW1, SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9",SW_Kailh_Choc_V2,16,Kailh Choc V2,
+U2,XIAO-Generic-Hybrid-14P-2.54-21X17.8MM,1,SEEEDUINO XIAO RP2040,
