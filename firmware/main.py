@@ -10,18 +10,20 @@ from kmk.keys import KC
 from kmk.scanners import DiodeOrientation
 from kmk.modules.macros import Macros
 from kmk.extensions.display import Display, TextEntry
+from kmk.extensions.LED import LED
+from kmk.extensions.LED import AnimationModes
 from kmk.extensions.display.ssd1306 import SSD1306
 
-COL0 = board.GP10;
-COL1 = board.GP9;
-COL2 = board.GP8;
-COL3 = board.GP7;
-ROW0 = board.GP1;
-ROW1 = board.GP6;
-ROW2 = board.GP3;
-ROW3 = board.GP2;
+COL0 = board.GP9;
+COL1 = board.GP8;
+COL2 = board.GP7;
+COL3 = board.GP0;
+ROW0 = board.GP6;
+ROW1 = board.GP3;
+ROW2 = board.GP2;
+ROW3 = board.GP1;
 
-DEBUG_PIN = board.GP0;
+LED_PIN = board.GP10;
 
 bus = busio.I2C(board.GP_SCL, board.GP_SDA);
 
@@ -48,6 +50,13 @@ macros = Macros();
 keyboard.modules.append(macros);
 
 keyboard.extensions.append(display);
+
+led = LED(
+    led_pin=[LED_PIN],
+    animation_mode=AnimationModes.BREATHING,
+    brightness=50
+);
+keyboard.extensions.append(led);
 
 keyboard.col_pins = (COL0, COL1, COL2, COL3);
 keyboard.row_pins = (ROW0, ROW1, ROW2, ROW3);

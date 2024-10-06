@@ -7,7 +7,7 @@
   (title_block
     (title "Cyao macropad")
     (date "2024-09-22")
-    (rev "v3.1")
+    (rev "v4.1")
     (company "Cheyao")
     (comment 1 "https://github.com/cheyao/macropad")
     (comment 2 "Hackclub repo: https://github.com/hackclub/hackpad")
@@ -1807,31 +1807,6 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 74.93 96.52 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 81b37641-6693-4984-b572-362dd9a33033)
-    (property "Reference" "#PWR05" (at 71.12 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 80.01 96.52 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 74.93 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 74.93 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2358688c-881a-4782-a4e4-1bccd7e79ab4))
-    (instances
-      (project "macropad"
-        (path "/bbfb2475-963d-4c49-ac81-fadef0dd23d7"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Switch:SW_Push") (at 199.39 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 86139507-589b-4636-9b00-9f1639c6a16f)
@@ -2195,6 +2170,31 @@
       (project "macropad"
         (path "/bbfb2475-963d-4c49-ac81-fadef0dd23d7"
           (reference "SW10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 74.93 96.52 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid cd452364-7d0c-408d-8a2f-6959b8d826c1)
+    (property "Reference" "#PWR09" (at 71.12 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 78.74 96.52 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 74.93 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 74.93 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1d23c755-fa42-4c68-9d1c-fd0fdfe57dcc))
+    (instances
+      (project "macropad"
+        (path "/bbfb2475-963d-4c49-ac81-fadef0dd23d7"
+          (reference "#PWR09") (unit 1)
         )
       )
     )

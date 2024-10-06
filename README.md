@@ -4,24 +4,19 @@ Hello! This is my first time designing a PCB and a CAD.
 Fingers crossed everything works fine
 
 <p align="middle">
-  <img src="https://cloud-54hh12yzw-hack-club-bot.vercel.app/0screenshot_2024-09-20_at_8.47.37_pm.png" width="32%"/>
-  <img src="https://cloud-54hh12yzw-hack-club-bot.vercel.app/1screenshot_2024-09-20_at_5.44.05_pm.png" width="32%"/> 
-  <img src="https://cloud-54hh12yzw-hack-club-bot.vercel.app/2screenshot_2024-09-20_at_5.43.58_pm.png" width="32%"/>
+    <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/0screenshot_2024-10-06_at_3.50.53_pm.png" width="32%"/>
+    <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/1screenshot_2024-10-06_at_3.50.14_pm.png" width="32%"/>
+    <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/2screenshot_2024-10-06_at_3.43.34_pm.png" width="32%"/>
 </p>
-
-<img src="https://cloud-8usq0iiv2-hack-club-bot.vercel.app/0screenshot_2024-09-22_at_9.38.49_am.png"/>
 
 ## File list:
 
 ```
 .
 ├── CAD                                         # 3D Files
-│   ├── cover.scad                              # Cover
-│   ├── case.scad                               # Case
-│   ├── ...                                     # Some libraries
+│   ├── case.FCStd                              # Case
 │   ├── plate.dxf                               # Keyboard plate
-│   ├── case.stl                                # Case stl output
-│   └── cover.stl                               # Cover stl output (Acrylic please)
+│   └── case.stl                                # Case stl output (Acrylic top if < 1.5mm thickness please)
 ├── PCB
 │   ├── macropad.step                           # 3D Model of the board
 │   ├── production                              # The output directory for production (Just send this folder to JLCPCB)
@@ -40,7 +35,7 @@ Fingers crossed everything works fine
     └── kmk                                     # kmk firmware
 ```
 
-NOTE: I will need a 0.96” SSD1306 OLED screen that is compatible with 3.3V
+NOTE: I will need a 0.96” SSD1306 OLED screen that accepts 5V with 3.3V logic
 
 The resistors are 4.7k ohm ones
 
