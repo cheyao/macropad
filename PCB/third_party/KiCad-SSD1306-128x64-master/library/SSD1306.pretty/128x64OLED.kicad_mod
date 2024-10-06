@@ -43,8 +43,8 @@
   (pad "2" thru_hole oval (at -1.08 -10.6 90) (size 2 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 1edaf747-6bd9-40ab-ae6c-8c118c5eeb41))
   (pad "3" thru_hole oval (at 1.46 -10.6 90) (size 2 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 4668c4ae-b799-49c9-9b26-84e7a5c88299))
   (pad "4" thru_hole oval (at 4 -10.6 90) (size 2 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 8745ae29-da85-4063-a1e5-a6341e1a5167))
-  (model "${KIPRJMOD}/third_party/KiCad-SSD1306-128x64-master/library/0,96oled.wrl"
-    (offset (xyz 0 0 0))
+  (model "${KIPRJMOD}/third_party/KiCad-SSD1306-128x64-master/SSD1306_OLED_Display(128x64).step"
+    (offset (xyz 0.2 -1.25 2.5))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
