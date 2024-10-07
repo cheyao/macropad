@@ -9,6 +9,17 @@ Fingers crossed everything works fine
     <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/2screenshot_2024-10-06_at_3.43.34_pm.png" width="32%"/>
 </p>
 
+## BOM
+- 1x SSD1306 128x64OLED (5V VCC, 3.3V logic, i2c)
+- 16x Didode 1N4148
+- 2x WS2812B LED
+- 2x 4.7k resistor
+- 16x Kailh Choc V2 switches
+- 1 SEEEDUINO XIAO RP2040
+- 4x same screws as orpheuspad and corresponding nuts
+
+Interactive bom at `PCB/production/ibom.html`
+
 ## File list:
 
 ```
@@ -36,8 +47,6 @@ Fingers crossed everything works fine
 ```
 
 NOTE: I will need a 0.96” SSD1306 OLED screen that accepts 5V with 3.3V logic
-
-The resistors are 4.7k ohm ones
 
 The resistors are allso probably optional - but suggested by reddit
 
