@@ -1,13 +1,17 @@
 # Macropad
 Hello! This is my first time designing a PCB and a CAD.
 
-Fingers crossed everything works fine
-
 <p align="middle">
     <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/0screenshot_2024-10-06_at_3.50.53_pm.png" width="32%"/>
     <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/1screenshot_2024-10-06_at_3.50.14_pm.png" width="32%"/>
     <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/2screenshot_2024-10-06_at_3.43.34_pm.png" width="32%"/>
 </p>
+
+Designed using:
+
+- KiCad - 6 revisions lol
+- OpenSCAD then FreeCAD (Fusion 360 doesn't work :() Got like 400 constraints in my freecad project
+- Python firmware
 
 ## BOM
 - 1x SSD1306 128x64OLED (5V VCC, 3.3V logic, i2c)
