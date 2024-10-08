@@ -17,6 +17,8 @@ Fingers crossed everything works fine
 - 16x Kailh Choc V2 switches
 - 1 SEEEDUINO XIAO RP2040
 - 4x same screws as orpheuspad and corresponding nuts
+- 1x 10 pF capacitor (code 100, not obligatory)
+- 1x 100 nF capacitor (code 104, not obligatory)
 
 Interactive bom at `PCB/production/ibom.html`
 

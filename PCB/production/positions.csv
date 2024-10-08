@@ -1,5 +1,7 @@
 ﻿Designator,Mid X,Mid Y,Rotation,Layer
 Brd1,40.34,-13.95,0.0,top
+C1,21.25,-18.25,180.0,bottom
+C2,51.0,-4.0,270.0,bottom
 D1,19.31,-28.5,0.0,bottom
 D10,68.81,-28.5,0.0,bottom
 D11,68.81,-45.0,0.0,bottom
