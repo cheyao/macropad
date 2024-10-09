@@ -2,8 +2,8 @@
 Hello! This is my first time designing a PCB and a CAD.
 
 <p align="middle">
-    <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/0screenshot_2024-10-06_at_3.50.53_pm.png" width="32%"/>
-    <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/1screenshot_2024-10-06_at_3.50.14_pm.png" width="32%"/>
+    <img src="https://cloud-fwkk14f6r-hack-club-bot.vercel.app/0screenshot_2024-10-09_at_9.59.15_pm.png" width="32%"/>
+    <img src="https://cloud-fwkk14f6r-hack-club-bot.vercel.app/1screenshot_2024-10-09_at_9.58.53_pm.png" width="32%"/>
     <img src="https://cloud-3jqi500oq-hack-club-bot.vercel.app/2screenshot_2024-10-06_at_3.43.34_pm.png" width="32%"/>
 </p>
 
