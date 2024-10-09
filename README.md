@@ -14,15 +14,15 @@ Designed using:
 - Python firmware
 
 ## BOM
-- 1x SSD1306 128x64OLED (5V VCC, 3.3V logic, i2c)
-- 16x Didode 1N4148
-- 2x WS2812B LED
-- 2x 4.7k resistor
-- 16x Kailh Choc V2 switches
 - 1 SEEEDUINO XIAO RP2040
-- 4x same screws as orpheuspad and corresponding nuts
-- 1x 10 pF capacitor (code 100, not obligatory)
+- 16x [Kailh Choc V2 switches](https://www.kailh.net/products/kailh-choc-v2-low-profile-switch-set)
+- 16x Didode 1N4148
+- 1x SSD1306 128x64OLED (5V VCC, 3.3V logic, i2c)
+- 4x [SK6812-MINI-E LED](https://www.adafruit.com/product/4960)
+- 2x 4.7k resistor
+- 3x 10 pF capacitor (code 100, not obligatory but best have)
 - 1x 100 nF capacitor (code 104, not obligatory)
+- 4x same screws as orpheuspad and corresponding nuts
 
 Interactive bom at `PCB/production/ibom.html`
 
