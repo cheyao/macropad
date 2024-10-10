@@ -17,11 +17,11 @@ from kmk.extensions.display.ssd1306 import SSD1306
 COL0 = board.GP9;
 COL1 = board.GP8;
 COL2 = board.GP7;
-COL3 = board.GP0;
-ROW0 = board.GP6;
-ROW1 = board.GP3;
-ROW2 = board.GP2;
-ROW3 = board.GP1;
+COL3 = board.GP6;
+ROW0 = board.GP3;
+ROW1 = board.GP2;
+ROW2 = board.GP1;
+ROW3 = board.GP0;
 
 LED_PIN = board.GP10;
 
@@ -41,7 +41,7 @@ display = Display(
 
 display.entries = [
         TextEntry(text='Cyao macropad!'   , x=0, y=0, x_anchor="M"),
-        TextEntry(text='*Insert Gura Pic*', x=0, y=12, x_anchor="M"),
+        TextEntry(text='*Insert Saber Pic*', x=0, y=12, x_anchor="M"),
 ];
 
 keyboard = KMKKeyboard();
