@@ -20,8 +20,8 @@ Designed using:
 - 1x SSD1306 128x64OLED (5V VCC, 3.3V logic, i2c)
 - 4x [SK6812-MINI-E LED](https://www.adafruit.com/product/4960)
 - 2x 4.7k resistor
-- 3x 10 pF capacitor (code 100, not obligatory but best have)
-- 1x 100 nF capacitor (code 104, not obligatory)
+- 4x 0.1 uF capacitor (code 104, not obligatory but best have)
+- 1x 10 uF capacitor (not obligatory)
 - 4x same screws as orpheuspad and corresponding nuts
 
 Interactive bom at `PCB/production/ibom.html`
