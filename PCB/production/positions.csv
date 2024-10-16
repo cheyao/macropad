@@ -1,10 +1,10 @@
 ﻿Designator,Mid X,Mid Y,Rotation,Layer
-Brd1,40.34,-13.95,0.0,top
+BRD1,40.34,-13.95,0.0,top
 C1,71.25,-98.5,180.0,bottom
 C2,51.0,-4.0,270.0,bottom
-C3,3.0,-92.0,270.0,bottom
-C4,62.0,-27.0,0.0,bottom
-C5,2.25,-41.25,90.0,bottom
+C3,9.0,-91.0,90.0,bottom
+C4,62.0,-38.5,0.0,bottom
+C5,7.0,-38.5,90.0,bottom
 D1,17.06,-30.225,0.0,bottom
 D10,71.06,-30.225,0.0,bottom
 D11,71.06,-47.225,0.0,bottom

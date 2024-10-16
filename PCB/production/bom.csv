@@ -1,6 +1,6 @@
 ﻿Designator,Footprint,Quantity,Value,LCSC Part #
-Brd1,128x64OLED,1,SSD1306,
-"C1, C3, C4, C5",C_Disc_D3.0mm_W1.6mm_P2.50mm,4,10pF,
+BRD1,128x64OLED,1,SSD1306,
+"C1, C3, C4, C5",C_Disc_D3.0mm_W1.6mm_P2.50mm,4,0.1uF,
 C2,C_Disc_D3.0mm_W1.6mm_P2.50mm,1,1uF,
 "D1, D10, D11, D12, D13, D14, D15, D16, D2, D3, D4, D5, D6, D7, D8, D9",D_DO-35_SOD27_P7.62mm_Horizontal,16,Didode 1N4148,
 "D17, D18, D21, D22",SK6812MINI-E,4,SK6812MINI,

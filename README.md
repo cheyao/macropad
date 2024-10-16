@@ -21,7 +21,7 @@ Designed using:
 - 4x [SK6812-MINI-E LED](https://www.adafruit.com/product/4960)
 - 2x 4.7k resistor
 - 4x 0.1 uF capacitor (code 104, not obligatory but best have)
-- 1x 10 uF capacitor (not obligatory)
+- 1x 1 uF capacitor (105 not obligatory)
 - 4x same screws as orpheuspad and corresponding nuts
 
 Interactive bom at `PCB/production/ibom.html`
