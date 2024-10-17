@@ -23,6 +23,7 @@ Designed using:
 - 4x 0.1 uF capacitor (code 104, not obligatory but best have)
 - 1x 1 uF capacitor (105 not obligatory)
 - 4x same screws as orpheuspad and corresponding nuts
+- 1kg of 99.99% gold please
 
 Interactive bom at `PCB/production/ibom.html`
 
