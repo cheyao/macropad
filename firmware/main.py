@@ -1,5 +1,5 @@
 # Cyao macropad firmware
-# Rev 1.0
+# Rev 1.1
 # Copyright 2024
 # Licensed under zlib license
 import board
@@ -10,8 +10,7 @@ from kmk.keys import KC
 from kmk.scanners import DiodeOrientation
 from kmk.modules.macros import Macros
 from kmk.extensions.display import Display, TextEntry
-from kmk.extensions.LED import LED
-from kmk.extensions.LED import AnimationModes
+from kmk.extensions.LED import LED, AnimationModes
 from kmk.extensions.display.ssd1306 import SSD1306
 
 COL0 = board.GP9;

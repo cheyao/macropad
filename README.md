@@ -9,21 +9,21 @@ Hello! This is my first time designing a PCB and a CAD.
 
 Designed using:
 
-- KiCad - 6 revisions lol
-- OpenSCAD then FreeCAD (Fusion 360 doesn't work :() Got like 400 constraints in my freecad project
+- KiCad - Made a ton of revisions
+- OpenSCAD then FreeCAD (Fusion 360 doesn't work on my mac lol) Got like 400 constraints in my freecad project
 - Python firmware
 
 ## BOM
 - 1 SEEEDUINO XIAO RP2040
 - 16x [Kailh Choc V2 switches](https://www.kailh.net/products/kailh-choc-v2-low-profile-switch-set)
-- 16x Didode 1N4148
-- 1x SSD1306 128x64OLED (5V VCC, 3.3V logic, i2c)
+- 16x 1N4148 diodes
+- 1x SSD1306 128x64O LED (5V VCC, 3.3V logic, I2C)
 - 4x [SK6812-MINI-E LED](https://www.adafruit.com/product/4960)
 - 2x 4.7k resistor
 - 4x 0.1 uF capacitor (code 104, not obligatory but best have)
 - 1x 1 uF capacitor (105 not obligatory)
 - 4x same screws as orpheuspad and corresponding nuts
-- 1kg of 99.99% gold please
+- 1kg of 99.99% gold please UwU
 
 Interactive bom at `PCB/production/ibom.html`
 
@@ -32,16 +32,15 @@ Interactive bom at `PCB/production/ibom.html`
 ```
 .
 ├── CAD                                         # 3D Files
-│   ├── case.FCStd                              # Case
-│   ├── plate.dxf                               # Keyboard plate
+│   ├── case.FCStd                              # Case FreeCAD design file
 │   └── case.stl                                # Case stl output (Acrylic top if < 1.5mm thickness please)
 ├── PCB
 │   ├── macropad.step                           # 3D Model of the board
 │   ├── production                              # The output directory for production (Just send this folder to JLCPCB)
-│   │   ├── Cyao_macropad_v3.0.zip              # Gerbers
+│   │   ├── Cyao_macropad_v7.6.zip              # Gerbers
 │   │   ├── *.{csv,ipc}                         # Misc files for JLCPCB
 │   │   └── ibom.html                           # Interactive bom for PCBAlex <3
-│   └── third_party
+│   └── third_party                             # 3rd party libraries
 │       ├── Kalih                               # The keys
 │       ├── OPL_Kicad_Library                   # Seed footprint
 │       ├── KiCad-SSD1306-128x64-master         # LCD
@@ -49,7 +48,7 @@ Interactive bom at `PCB/production/ibom.html`
 └── firmware                                    # Directory of my own firmware
     ├── adafruit-circuitpython-seeeduino_xiao_rp2040-en_US-9.1.4.uf2 # Circuitpython firmware
     ├── main.py                                 # Main firmware
-    ├── boot.py                                 # Boot options
+    ├── boot.py                                 # Boot options (empty)
     └── kmk                                     # kmk firmware
 ```
 
