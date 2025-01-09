@@ -53,6 +53,7 @@ class KMKKeyboard:
     keys_pressed = set()
     axes = set()
     _coordkeys_pressed = {}
+    implicit_modifier = None
     hid_type = HIDModes.USB
     secondary_hid_type = None
     _hid_helper = None
@@ -184,14 +185,6 @@ class KMKKeyboard:
                 buffer, self._resume_buffer = self._resume_buffer, buffer
 
         self._resume_buffer_x = buffer
-
-    @property
-    def debug_enabled(self) -> bool:
-        return debug.enabled
-
-    @debug_enabled.setter
-    def debug_enabled(self, enabled: bool):
-        debug.enabled = enabled
 
     def pre_process_key(
         self,

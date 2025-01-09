@@ -285,42 +285,11 @@ def maybe_make_shifted_key(candidate: str) -> Optional[Key]:
             )
 
 
-def maybe_make_international_key(candidate: str) -> Optional[Key]:
-    codes = (
-        (50, ('NONUS_HASH', 'NUHS')),
-        (100, ('NONUS_BSLASH', 'NUBS')),
-        (101, ('APP', 'APPLICATION', 'SEL', 'WINMENU')),
-        (135, ('INT1', 'RO')),
-        (136, ('INT2', 'KANA')),
-        (137, ('INT3', 'JYEN')),
-        (138, ('INT4', 'HENK')),
-        (139, ('INT5', 'MHEN')),
-        (140, ('INT6',)),
-        (141, ('INT7',)),
-        (142, ('INT8',)),
-        (143, ('INT9',)),
-        (144, ('LANG1', 'HAEN')),
-        (145, ('LANG2', 'HAEJ')),
-        (146, ('LANG3',)),
-        (147, ('LANG4',)),
-        (148, ('LANG5',)),
-        (149, ('LANG6',)),
-        (150, ('LANG7',)),
-        (151, ('LANG8',)),
-        (152, ('LANG9',)),
-    )
-
-    for code, names in codes:
-        if candidate in names:
-            return make_key(names=names, constructor=KeyboardKey, code=code)
-
-
 def maybe_make_firmware_key(candidate: str) -> Optional[Key]:
     keys = (
         ((('BLE_REFRESH',), handlers.ble_refresh)),
         ((('BLE_DISCONNECT',), handlers.ble_disconnect)),
         ((('BOOTLOADER',), handlers.bootloader)),
-        ((('DEBUG', 'DBG'), handlers.debug_pressed)),
         ((('HID_SWITCH', 'HID'), handlers.hid_switch)),
         ((('RELOAD', 'RLD'), handlers.reload)),
         ((('RESET',), handlers.reset)),
@@ -364,8 +333,6 @@ KEY_GENERATORS = (
     # sending Shift+(whatever key is normally pressed) to get these, so
     # for example `KC_AT` will hold shift and press 2.
     maybe_make_shifted_key,
-    # International
-    maybe_make_international_key,
 )
 
 
@@ -465,6 +432,9 @@ class _DefaultKey(Key):
     def on_press(self, keyboard: Keyboard, coord_int: Optional[int] = None) -> None:
         keyboard.hid_pending = True
         keyboard.keys_pressed.add(self)
+        if keyboard.implicit_modifier is not None:
+            keyboard.keys_pressed.discard(keyboard.implicit_modifier)
+            keyboard.implicit_modifier = None
 
     def on_release(self, keyboard: Keyboard, coord_int: Optional[int] = None) -> None:
         keyboard.hid_pending = True
@@ -490,8 +460,6 @@ class ModifierKey(_DefaultKey):
 
 
 class ModifiedKey(Key):
-    code = -1
-
     def __init__(self, code: [Key, int], modifier: [ModifierKey]):
         # generate from code by maybe_make_shifted_key
         if isinstance(code, int):
@@ -499,21 +467,35 @@ class ModifiedKey(Key):
         else:
             key = code
 
+        # stack modifier keys
+        if isinstance(key, ModifierKey):
+            modifier = ModifierKey(key.code | modifier.code)
+            key = None
         # stack modified keys
-        if isinstance(key, ModifiedKey):
+        elif isinstance(key, ModifiedKey):
             modifier = ModifierKey(key.modifier.code | modifier.code)
             key = key.key
+        # clone modifier so it doesn't override explicit mods
+        else:
+            modifier = ModifierKey(modifier.code)
 
         self.key = key
         self.modifier = modifier
 
     def on_press(self, keyboard: Keyboard, coord_int: Optional[int] = None) -> None:
         self.modifier.on_press(keyboard, coord_int)
-        self.key.on_press(keyboard, coord_int)
+        if self.key is not None:
+            self.key.on_press(keyboard, coord_int)
+            if keyboard.implicit_modifier is not None:
+                keyboard.implicit_modifier.on_release(keyboard, coord_int)
+            keyboard.implicit_modifier = self.modifier
 
     def on_release(self, keyboard: Keyboard, coord_int: Optional[int] = None) -> None:
-        self.key.on_release(keyboard, coord_int)
         self.modifier.on_release(keyboard, coord_int)
+        if self.key is not None:
+            self.key.on_release(keyboard, coord_int)
+            if keyboard.implicit_modifier == self.modifier:
+                keyboard.implicit_modifier = None
 
     def __repr__(self):
         return (
